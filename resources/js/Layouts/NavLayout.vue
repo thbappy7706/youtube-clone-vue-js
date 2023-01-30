@@ -45,6 +45,29 @@ let openSideNav = ref(true);
         <div id="SideNav" class="h-[100%] fixed z-0 bg-black" :class="[!openSideNav ? 'w-[70px]': 'w-[240px]']">
             <ul class="mt-[60px] w-full" :class="[!openSideNav ? 'p-2' : 'px-5 pb-2 pt-[7px]']">
                 <SideNavItem :openSideNav="openSideNav" iconString="Home"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="Add Video"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="Delete Video"/>
+                <div class="border-b border-b-gray-700 my-2.5"></div>
+                <SideNavItem :openSideNav="openSideNav" iconString="Subscriptions"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="Library"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="Liked"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="History"/>
+                <SideNavItem :openSideNav="openSideNav" iconString="Watch Later"/>
+                <div v-if="openSideNav">
+                    <div class="border-b border-b-gray-700 my-2.5">
+                    </div>
+                    <div class="text-gray-400 text-[14px] text-extrabold">
+                        About Press Copyright
+                        <div>Contact us</div>
+                        Creator Advertise Developers
+                    </div>
+                    <div class="border-b border-b-gray-700 my-2.5"></div>
+                    <div class="text-gray-400 text-[14px] text-extrabold">
+                        Terms Privacy Policy & Safety
+                        <div>How YouTube works</div>
+                        <span>Test new features</span>
+                    </div>
+                </div>
             </ul>
         </div>
 
