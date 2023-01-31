@@ -8,12 +8,6 @@ import SideNavItem from "@/Components/SideNavItem.vue";
 let openSideNav = ref(true);
 </script>
 
-<style scoped lang="css">
-.customInput {
-    @apply block w-full px-5 py-1.5 text-base font-normal text-gray-200 bg-black placeholder-gray-400 bg-clip-padding border-solid border-l-gray-700 border-y-gray-700 rounded-l-full transition ease-in-out m-0 border-transparent focus:ring-0;
-}
-</style>
-
 <template>
     <div class="relative">
         <div id="TopNav" class="w-[100%] h-[60px] fixed bg-black z-20 flex items-center justify-between">
@@ -74,6 +68,23 @@ let openSideNav = ref(true);
         <div id="SideNavOverlay">
 
         </div>
-        <slot/>
+        <div class="w-[100%] h-[calc(100vh-60px)] absolute right-0 top-[60px]"
+        :class="{
+            'w-[calc(100%-70px)]' : !openSideNav,
+            'w-[calc(100%-240px)]' : openSideNav,}">
+            <slot/>
+        </div>
     </div>
 </template>
+
+<style scoped lang="css">
+.customInput {
+    @apply block w-full px-5 py-1.5 text-base font-normal text-gray-200 bg-black placeholder-gray-400 bg-clip-padding border-solid border-l-gray-700 border-y-gray-700 rounded-l-full transition ease-in-out m-0 border-transparent focus:ring-0;
+}
+</style>
+
+<style>
+body{
+    background-color: black;
+}
+</style>
