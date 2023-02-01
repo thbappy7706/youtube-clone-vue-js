@@ -2,6 +2,7 @@
 import { Head, Link } from '@inertiajs/vue3';
 import NavLayout from "@/Layouts/NavLayout.vue";
 import VideoCard from "@/Components/VideoCard.vue";
+import Badge from "@/Components/Badge.vue";
 
 // defineProps({
 //     canLogin: Boolean,
@@ -23,6 +24,9 @@ import VideoCard from "@/Components/VideoCard.vue";
             videoUrl="/Videos/Lake.mp4"
             thumbnail="/Videos/Thumbnails/Lake.png"
         />
+    </div>
+    <div>
+        <Badge background="bg-purple-600"/>
     </div>
 
 </NavLayout>
