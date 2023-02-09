@@ -1,6 +1,7 @@
 <script setup>
 import {Head, Link} from '@inertiajs/vue3';
 import NavLayout from "@/Layouts/NavLayout.vue";
+import RecomendedVideos from "@/Components/RecomendedVideos.vue";
 import CheckCircle from "vue-material-design-icons/CheckCircle.vue";
 import ThumbUpOutline from "vue-material-design-icons/ThumbUpOutline.vue";
 import ThumbDownOutline from "vue-material-design-icons/ThumbDownOutline.vue";
@@ -50,25 +51,45 @@ import ThumbDownOutline from "vue-material-design-icons/ThumbDownOutline.vue";
                             :src="`https://picsum.photos/id/${(Math.random()*100).toFixed(0)}/100` || ''"
                         />
                         <div class="pl-6 mt-1">
-                         <div class="text-white font-extrabold items-baseline">
-                             <div> Tanvir Hosssen Bappy</div>
-                             <div class="text-gray-400 pl-3">
-                                 6 days ago
-                             </div>
-                         </div>
+                            <div class="text-white font-extrabold items-baseline">
+                                <div> Tanvir Hosssen Bappy</div>
+                                <div class="text-gray-400 pl-3">
+                                    6 days ago
+                                </div>
+                            </div>
 
                             <div class="text-gray-200 text-sm font-extrabold">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
                             </div>
                             <div class="mt-4 flex items-center">
                                 <ThumbUpOutline fillColor="#FFFFFF" :size="20" class="pr-2"/>
-                                <div class="text-gray-400 text-sm font-extrabold pr-10">{{ (Math.random() * 100).toFixed(0) }}</div>
+                                <div class="text-gray-400 text-sm font-extrabold pr-10">
+                                    {{ (Math.random() * 100).toFixed(0) }}
+                                </div>
                                 <ThumbDownOutline fillColor="#FFFFFF" :size="20"/>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="w-[500px] p-3 sm:block hidden">
+                <div class="flex mb-3">
+                    <RecomendedVideos
+                        :vid="{
+    title : 'Stars in the sky',
+    video : '/Videos/Lake.mp4',
+    thumbnail: '/Videos/Thumbnails/Lake.png',
+    user: 'Tanvir Hossen Emon',
+    views :  '12k views -3 days ago'
+}"
+                    />
 
+                </div>
             </div>
 
         </div>
