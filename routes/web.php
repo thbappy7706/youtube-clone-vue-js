@@ -17,7 +17,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {return inertia()->render('Welcome');});
+Route::get('/', function () {return inertia()->render('Welcome');})->name('home');
+Route::get('delete-video', function () {return inertia()->render('DeleteVideo');})->name('deleteVideo');
 Route::get('videos/{id}',[VideoController::class,'show'])->name('videos.show');
 
 require __DIR__.'/auth.php';
