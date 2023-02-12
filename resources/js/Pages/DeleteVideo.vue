@@ -33,7 +33,6 @@ import NavLayout from "@/Layouts/NavLayout.vue";
                 </tr>
                 </tbody>
             </table>
-
         </div>
     </NavLayout>
 </template>
